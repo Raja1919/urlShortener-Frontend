@@ -69,7 +69,7 @@ const Data = () => {
                 <td>
                   <a
                     href={item.originalUrl}
-                    target="_blank"
+                    target="_new"
                     onClick={(e) => handleShortUrlClick(e, item.shortUrl)}
                   >
                     {item.shortUrl}

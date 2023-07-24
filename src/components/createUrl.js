@@ -1,5 +1,3 @@
-// Urlshort.js
-
 import React, { useState } from "react";
 import axios from "axios";
 
@@ -11,14 +9,12 @@ const Urlshort = () => {
     e.preventDefault();
 
     try {
-      // Get the authentication token from local storage
       const token = localStorage.getItem("token");
       if (!token) {
         setError("Authentication token not found. Please log in.");
         return;
       }
 
-      // Make a POST request to the backend to create a short URL
       const response = await axios.post(
         "https://urlshortener-backend-p88f.onrender.com/url/create",
         {
@@ -30,8 +26,8 @@ const Urlshort = () => {
           },
         }
       );
-        window.alert("created successfully")
-      // Clear the input field and handle successful response
+      window.alert("created successfully");
+      console.log(response);
       setOriginalUrl("");
     } catch (error) {
       setError("Error: Unable to create short URL.");

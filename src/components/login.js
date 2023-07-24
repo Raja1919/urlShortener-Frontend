@@ -87,7 +87,7 @@ const Login = ({ setIsLoggedIn }) => {
           </div>
         </div>
         <div className="forget">
-          <div class="reset-password">
+          <div className="reset-password">
             <p>
               Forget?
               <button onClick={handleForget} className="btn btn-primary">
@@ -96,7 +96,7 @@ const Login = ({ setIsLoggedIn }) => {
             </p>
           </div>
 
-          <div class="signup">
+          <div className="signup">
             <p>
               Not a member?
               <button onClick={handleSignup} className="btn btn-primary">
